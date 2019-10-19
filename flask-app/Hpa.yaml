@@ -1,0 +1,20 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: test-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: flask
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: External
+    external:
+      metricName: custom.googleapis.com|nginx_ingress_controller_nginx_process_connections
+      metricSelector:
+        matchLabels:
+          metric.labels.state: active
+      targetValue: 3

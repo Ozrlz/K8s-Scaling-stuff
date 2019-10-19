@@ -1,0 +1,9 @@
+# Ignore the svc account
+terraform/svc-account.json
+
+# Terraform files
+*.terraform
+*.tfstate*
+
+# VSCode files
+.vscode

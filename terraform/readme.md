@@ -1,0 +1,1 @@
+## Store your svc-account credentials in this folder and match the GOOGLE_CLOUD_KEYFILE_JSON bash var in the script
