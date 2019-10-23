@@ -12,10 +12,10 @@ resource "google_container_node_pool" "node_pool" {
   location = "${var.location}"
   cluster  = "${google_container_cluster.cluster.name}"
 
-  initial_node_count = 1
+  initial_node_count = "${var.nodepools-init-size}"
   autoscaling {
-    min_node_count = 1
-    max_node_count = 3
+    min_node_count = "${var.autoscaling_min_size}"
+    max_node_count = "${var.autoscaling_max_size}"
   }
 
   management {
