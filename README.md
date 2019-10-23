@@ -16,7 +16,8 @@ It is important that you place your json file in the terraform directory as svc-
 gcloud auth activate-service-account --key-file=${PATH_TO_UR_SVC_ACCOUNT.json}
 ```
 
-Once authenticated, you just need to run the install script:
+Once authenticated, change the terraform/variables.tf and place your project id as the projec-id value.
+After that, you just need to run the install script:
 
 ```bash
 ./install.sh
