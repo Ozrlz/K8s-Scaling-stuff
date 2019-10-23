@@ -11,7 +11,7 @@ variable "nodepools-init-size" {
 }
 
 variable "project-id" {
-  default = "test-01-monitoring"
+  default = "test-01-monitoring-256601"
 }
 
 variable "image_type" {
@@ -33,3 +33,11 @@ variable "disk_type" {
 variable "preemptible" {
   default = false
 }
+variable "autoscaling_min_size" {
+  default = "1"
+}
+
+variable "autoscaling_max_size" {
+  default = "5"
+}
+
