@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: flask
   minReplicas: 1
-  maxReplicas: 10
+  maxReplicas: 7
   metrics:
   - type: External
     external:
