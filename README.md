@@ -34,3 +34,5 @@ terraform destroy -auto-approve
 
 #### Weird issue with kubectl
 https://github.com/kubernetes/kubectl/issues/568
+#### Issue to explain more Values vs AverageValue
+https://github.com/kubernetes/kubernetes/issues/79272
